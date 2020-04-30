@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: "vlp-cloud-health-monitor-ingress"
+  namespace: "vlp-cloud-health-monitor"
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internal
+  labels:
+    app: vlp-cloud-health-monitor-ingress
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /*
+            backend:
+              serviceName: "vlp-cloud-health-monitor"
+              servicePort: 8080

@@ -1,0 +1,39 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vlp-cloud-health-service
+  namespace: vlp-cloud-health-service
+  labels:
+    app: vlp-cloud-health-service
+  annotations:
+    # Container Image Automated Updates
+    flux.weave.works/automated: "true"
+    # do not apply this manifest on the cluster
+    #flux.weave.works/ignore: "true"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vlp-cloud-health-service
+  template:
+    metadata:
+      labels:
+        app: vlp-cloud-health-service
+    spec:
+      containers:
+      - name: vlp-cloud-health-service
+        image: 536909611767.dkr.ecr.us-west-2.amazonaws.com/vlp-cloud-health-monitor:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+        livenessProbe:
+          httpGet:
+            path: /metrics
+            port: http
+        readinessProbe:
+          httpGet:
+            path: /metrics
+            port: http
