@@ -23,12 +23,17 @@ spec:
     spec:
       containers:
       - name: vlp-cloud-health-service
+<<<<<<< HEAD
         image: 536909611767.dkr.ecr.us-west-2.amazonaws.com/vlp-cloud-health-monitor:latest
+=======
+        image: 536909611767.dkr.ecr.us-west-2.amazonaws.com/vlp-cloud-health-monitor:d39d8a5c
+>>>>>>> 199a3a3675bf36e56d0263fe5e3ac1e94a6371e3
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
           name: http
           protocol: TCP
+<<<<<<< HEAD
         livenessProbe:
           httpGet:
             path: /metrics
@@ -37,3 +42,5 @@ spec:
           httpGet:
             path: /metrics
             port: http
+=======
+>>>>>>> 199a3a3675bf36e56d0263fe5e3ac1e94a6371e3
