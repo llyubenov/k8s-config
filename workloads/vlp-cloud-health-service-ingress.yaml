@@ -14,5 +14,5 @@ spec:
         paths:
           - path: /*
             backend:
-              serviceName: "vlp-cloud-health-monitor"
+              serviceName: "vlp-cloud-health-service"
               servicePort: 8080
