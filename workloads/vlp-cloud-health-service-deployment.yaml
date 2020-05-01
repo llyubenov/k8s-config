@@ -26,6 +26,6 @@ spec:
         image: 536909611767.dkr.ecr.us-west-2.amazonaws.com/vlp-cloud-health-monitor:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 8088
           name: http
           protocol: TCP
