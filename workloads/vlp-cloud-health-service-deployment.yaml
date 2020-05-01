@@ -32,8 +32,8 @@ spec:
         livenessProbe:
           httpGet:
             path: /metrics
-            port: http
+            port: 8080
         readinessProbe:
           httpGet:
             path: /metrics
-            port: http
+            port: 8080
