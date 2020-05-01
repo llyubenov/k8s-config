@@ -29,11 +29,3 @@ spec:
         - containerPort: 8080
           name: http
           protocol: TCP
-        livenessProbe:
-          httpGet:
-            path: /metrics
-            port: 8080
-        readinessProbe:
-          httpGet:
-            path: /metrics
-            port: 8080
