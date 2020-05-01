@@ -23,17 +23,9 @@ spec:
     spec:
       containers:
       - name: vlp-cloud-health-service
-        image: 536909611767.dkr.ecr.us-west-2.amazonaws.com/vlp-cloud-health-monitor:d39d8a5c
+        image: 536909611767.dkr.ecr.us-west-2.amazonaws.com/vlp-cloud-health-monitor:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8088
           name: http
           protocol: TCP
-        livenessProbe:
-          httpGet:
-            path: /metrics
-            port: 8088
-        readinessProbe:
-          httpGet:
-            path: /metrics
-            port: 8088
