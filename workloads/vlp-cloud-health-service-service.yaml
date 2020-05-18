@@ -5,6 +5,11 @@ metadata:
   namespace: vlp-cloud-health-service
   labels:
     app: vlp-cloud-health-service
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/scheme: "http"
+    prometheus.io/path: /metrics
+    prometheus.io/port: "8088"
 spec:
   type: NodePort
   ports:
