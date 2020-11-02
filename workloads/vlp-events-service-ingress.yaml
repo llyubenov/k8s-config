@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: "vlp-events-service-ingress"
+  namespace: "vlp-events-service"
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: external
+  labels:
+    app: vlp-events-service-ingress
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /*
+            backend:
+              serviceName: "vlp-events-service"
+              servicePort: 8080
