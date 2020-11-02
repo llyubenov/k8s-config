@@ -5,7 +5,7 @@ metadata:
   namespace: "vlp-events-service"
   annotations:
     kubernetes.io/ingress.class: alb
-    alb.ingress.kubernetes.io/scheme: external
+    alb.ingress.kubernetes.io/scheme: internet-facing
   labels:
     app: vlp-events-service-ingress
 spec:
