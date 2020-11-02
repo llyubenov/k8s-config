@@ -15,4 +15,4 @@ spec:
           - path: /*
             backend:
               serviceName: "vlp-events-service"
-              servicePort: 8080
+              servicePort: 8081
