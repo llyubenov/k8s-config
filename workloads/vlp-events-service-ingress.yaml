@@ -6,6 +6,9 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]'
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-west-2:536909611767:certificate/d0eff998-c1c8-4696-af51-3737218e5d5e
+    alb.ingress.kubernetes.io/tags: Environment=dev,App=events-service
   labels:
     app: vlp-events-service-ingress
 spec:
