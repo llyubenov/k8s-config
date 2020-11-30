@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: vlp-events-service
-        image: 536909611767.dkr.ecr.us-west-2.amazonaws.com/vlp-events-service:2f340f1c
+        image: 536909611767.dkr.ecr.us-west-2.amazonaws.com/vlp-events-service:3dac825a
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
