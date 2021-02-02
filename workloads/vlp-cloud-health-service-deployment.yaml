@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: vlp-cloud-health-service
-        image: 536909611767.dkr.ecr.us-west-2.amazonaws.com/vlp-cloud-health-monitor:97c7431c
+        image: 536909611767.dkr.ecr.us-west-2.amazonaws.com/vlp-cloud-health-monitor:9043a3cd
         imagePullPolicy: Always
         ports:
         - containerPort: 8088
